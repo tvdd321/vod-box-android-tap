@@ -45,7 +45,7 @@ vod-android/
 ## 如何发一个新版本（一键发版）
 
 构建成功后 CI 会**自动**发布 GitHub Release（v`versionName`）并把 `update.json`
-推送到 ttdy.github.io 仓库，App 启动时检测到新版本即可弹窗一键升级。只需两步：
+推送到 tvdd321.github.io 仓库，App 启动时检测到新版本即可弹窗一键升级。只需两步：
 
 1. 修改 `app/build.gradle` 的版本号：
 
@@ -63,7 +63,7 @@ vod-android/
    ```
 
 CI 会自动完成后续所有事：签名构建 → 发布 `v1.2` Release → 读取最新 commit
-message 生成 update.json 并推送到 `ttdy/ttdy.github.io`。
+message 生成 update.json 并推送到 `tvdd321/tvdd321.github.io`。
 
 ### 发版注意事项
 
@@ -71,7 +71,7 @@ message 生成 update.json 并推送到 `ttdy/ttdy.github.io`。
 - 首次从旧版（随机 debug 签名）升级到新签名版本需**先卸载旧版**再安装，此后可正常覆盖升级；
 - 同一版本重复构建时 update.json 内容不变，CI 会跳过推送，不会产生冗余提交；
 - CI 仓库需配置 secrets：`VODBOX_KEYSTORE_B64`、`VODBOX_KEYSTORE_PASS`（签名）与
-  `VOD_PAGES_TOKEN`（推送 ttdy.github.io 的 token，未配置则跳过 update.json 同步）。
+  `VOD_PAGES_TOKEN`（推送 tvdd321.github.io 的 token，未配置则跳过 update.json 同步）。
 
 ### 方式二：本机手动构建
 

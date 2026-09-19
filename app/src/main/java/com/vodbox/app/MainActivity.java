@@ -48,7 +48,7 @@ import java.net.URL;
 public class MainActivity extends Activity {
 
     private static final String NODE_URL = "http://127.0.0.1:3000/";
-    private static final String UPDATE_JSON_URL = "https://ttdy.github.io/update-tap.json";
+    private static final String UPDATE_JSON_URL = "https://tvdd321.github.io/update-tap.json";
 
     static {
         System.loadLibrary("native-lib");
