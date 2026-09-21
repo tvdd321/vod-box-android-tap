@@ -1,6 +1,6 @@
 {
   "_说明": "本文件是配置模板。remoteConfigUrl 指向外部接口配置(与本站点同构的 JSON)，留空/去掉则仅使用本文件内配置。修改远程 JSON 后，服务每 60 秒自动刷新，无需重启；也可用远程 _pro 控制高级模式(/aaa)源。",
-  "remoteConfigUrl": "https://tvcc.de5.net/abc.json",
+  "remoteConfigUrl": "https://tvdd321.github.io/abc.json",
   "liangzi": {
     "name": "量子资源",
     "api": "http://cj.lziapi.com/api.php/provide/vod/",
