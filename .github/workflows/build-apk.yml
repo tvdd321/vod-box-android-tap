@@ -99,7 +99,7 @@ jobs:
           rm -rf /tmp/pages-site
           git clone --depth 1 "https://x-access-token:${VOD_PAGES_TOKEN}@github.com/tvdd321/tvdd321.github.io.git" /tmp/pages-site
           cd /tmp/pages-site
-          BASE="https://github.com/tvdd321/vod-box-android-tap/releases/latest/download/"
+          BASE="https://vod-box-dup.pages.dev/dl/tap/"
           jq -n --argjson vc "$VCODE" --arg v "$VERSION" --arg note "$NOTE" --arg b "$BASE" '{versionCode:$vc, versionName:$v, note:$note, apk:($b+"app-arm64-v8a-release.apk"), apkArm64:($b+"app-arm64-v8a-release.apk"), apkArm:($b+"app-armeabi-v7a-release.apk")}' > update-tap.json
           git config user.name "vod-box-ci"
           git config user.email "ci@vod-box.local"
