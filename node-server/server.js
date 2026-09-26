@@ -82,12 +82,13 @@ let SOURCES = Object.assign({}, DEFAULT_SOURCES, _cfg.sources);
 const REMOTE_CONFIG_URL = _cfg.remoteConfigUrl;
 
 // 移动网络下运营商可能对采集站/媒体域名做 TLS 阻断，且部分域名后缀会被整体限制：
-// 直连失败时自动回退到 CF 中转，中转按以下域名顺序尝试（CC.CD 后缀已被运营商限制，故不列入）
+// 直连失败时自动回退到 CF 中转，中转按以下域名顺序尝试：
+// 首选 CF 绑定自定义域名 fftv.de5.net；vod-box-dup.pages.dev 为项目 pages.dev 域名，作兜底
 const RELAY_BASES = [
+  'https://fftv.de5.net/api/relay',
   'https://tvgg.de5.net/api/relay',
-  'https://vod-box.pages.dev/api/relay',
   'https://tvdd.us.ci/api/relay',
-  'https://ttys.cn.mt/api/relay',
+  'https://vod-box-dup.pages.dev/api/relay',
 ];
 const RELAY_TOKEN = 'vb-relay-7c41f0a9';
 const RELAY_TIMEOUT = 6000;
