@@ -86,7 +86,6 @@ const REMOTE_CONFIG_URL = _cfg.remoteConfigUrl;
 // 首选 CF 绑定自定义域名 fftv.de5.net；vod-box-dup.pages.dev 为项目 pages.dev 域名，作兜底
 const RELAY_BASES = [
   'https://fftv.de5.net/api/relay',
-  'https://tvgg.de5.net/api/relay',
   'https://tvdd.us.ci/api/relay',
   'https://vod-box-dup.pages.dev/api/relay',
 ];
